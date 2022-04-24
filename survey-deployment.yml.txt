@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: blog
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - env:
+        image: dw19980/survey:latest
+        imagePullPolicy: Always
+        name: survey
+        ports:
+        - containerPort: 80
