@@ -1,0 +1,8 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'build'
+    - '-t'
+    - 'us-docker.pkg.dev/survey-app:1.0'
+    - '.'
+  dir: 'capstone'
